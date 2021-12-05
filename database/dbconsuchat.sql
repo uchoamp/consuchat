@@ -7,7 +7,7 @@ CREATE TABLE IF NOT EXISTS cliente(
     nome VARCHAR(255) NOT NULL,
     sobrenome VARCHAR(255) NOT NULL,
     cpf CHAR(11) NOT NULL,
-    telefone CHAR(11) NOT NULL,
+    telefone CHAR(10) NOT NULL,
     endereco VARCHAR(255) NULL,
     nascimento DATE NULL,
     PRIMARY KEY (id)
@@ -16,7 +16,7 @@ CREATE TABLE IF NOT EXISTS cliente(
 CREATE TABLE IF NOT EXISTS clinica(
     id INT AUTO_INCREMENT,
     nome VARCHAR(255) NOT NULL,
-    telefone CHAR(11) NOT NULL,
+    telefone CHAR(10) NOT NULL,
     tipo VARCHAR(255) NOT NULL,
     endereco VARCHAR(255) NOT NULL,
     longitude VARCHAR(45),
@@ -25,9 +25,10 @@ CREATE TABLE IF NOT EXISTS clinica(
 ) ;
 
 CREATE TABLE IF NOT EXISTS consulta(
-	id INT AUTO_INCREMENT,
+    id INT AUTO_INCREMENT,
     descricao VARCHAR(255) NULL,
     marcada DATETIME NOT NULL,
+    duracao SMALLINT NOT NULL,
     realizada BOOLEAN,
     cliente_id INT NOT NULL,
     clinica_id INT NOT NULL,
