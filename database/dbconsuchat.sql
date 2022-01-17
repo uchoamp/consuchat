@@ -51,14 +51,15 @@ CREATE TABLE IF NOT EXISTS horario(
     FOREIGN KEY (clinica_id) REFERENCES clinica(id)
 );
 
-CREATE TABLE IF NOT EXISTS funcionario(
+CREATE TABLE IF NOT EXISTS usuario(
     id INT AUTO_INCREMENT,
     nome VARCHAR(255) NOT NULL,
     sobrenome VARCHAR(255) NOT NULL, 
+    nivel_acesso TINYINT NOT NULL,
     email VARCHAR(255) NOT NULL,
     username VARCHAR(255) NOT NULL,
     password VARCHAR(255) NOT NULL,
-    clinica_id INT NOT NULL,
+    clinica_id INT,
     PRIMARY KEY (id),
     FOREIGN KEY (clinica_id) REFERENCES clinica(id)
 );
