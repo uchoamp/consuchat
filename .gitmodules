@@ -1,0 +1,9 @@
+[submodule "consuchat-api"]
+	path = consuchat-api
+	url = git@github.com:uchoamp/consuchat-api.git
+[submodule "consuchat-bot"]
+	path = consuchat-bot
+	url = git@github.com:uchoamp/consuchat-bot.git
+[submodule "consuchat-admin"]
+	path = consuchat-admin
+	url = git@github.com:uchoamp/consuchat-admin.git
